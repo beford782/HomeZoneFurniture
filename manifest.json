@@ -1,0 +1,10 @@
+{
+  "name": "DreamFinder — Home Zone Furniture",
+  "short_name": "DreamFinder",
+  "description": "Personalized sleep consultation for Home Zone Furniture",
+  "start_url": "/HomeZoneFurniture/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#0f1f33",
+  "theme_color": "#0f1f33"
+}

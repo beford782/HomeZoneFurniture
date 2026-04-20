@@ -1,0 +1,28 @@
+{
+  "storeName": "Home Zone Furniture",
+  "languages": ["en"],
+  "logo": {
+    "main": "home zone",
+    "sub": "furniture"
+  },
+  "colors": {
+    "storePrimary": "#A32F2C",
+    "storePrimaryLight": "#BA3A37",
+    "storePrimaryGlow": "rgba(163, 47, 44, 0.15)"
+  },
+  "discountPrefix": "HOME",
+  "text": {
+    "pageTitle": "DreamFinder — Home Zone Furniture Sleep Quiz",
+    "metaDescription": "Take the DreamFinder sleep quiz at Home Zone Furniture and get personalized mattress recommendations.",
+    "ogTitle": "DreamFinder — Home Zone Furniture",
+    "trustSignal": "Texas Born. Family Owned. Since 2007.",
+    "madeBadge": "Made in Texas",
+    "socialProof": "Trusted by 500,000+ Texas families",
+    "footer": "&copy; 2026 Home Zone Furniture. All rights reserved.",
+    "emailPrivacy": "We'll only use your email to send your results.",
+    "privacyPolicyContact": "To have your information removed, contact your local Home Zone Furniture store.",
+    "inStockText": "In Stock at Home Zone Furniture",
+    "emailHeader": "Home Zone Furniture × DreamFinder",
+    "emailSubtext": "Bring this email to your Home Zone Furniture store"
+  }
+}
