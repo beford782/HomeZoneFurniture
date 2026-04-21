@@ -649,12 +649,45 @@
       50% { box-shadow: 0 6px 48px rgba(212, 168, 75, 0.52), 0 0 80px rgba(212, 168, 75, 0.15); }
     }
 
-    .cta-btn.pulse {
+    .cta-btn.pulse, .acc-next-btn.pulse {
       animation: ctaPulse 2.5s ease-in-out infinite;
     }
 
-    .cta-btn.pulse:hover {
+    .cta-btn.pulse:hover, .acc-next-btn.pulse:hover {
       animation: none;
+    }
+
+    @keyframes bundleHeroGlow {
+      0%, 100% {
+        box-shadow: 0 6px 24px rgba(212, 168, 75, 0.15),
+                    inset 0 0 0 1.5px rgba(212, 168, 75, 0.45);
+      }
+      50% {
+        box-shadow: 0 8px 38px rgba(212, 168, 75, 0.35),
+                    inset 0 0 0 1.5px rgba(212, 168, 75, 0.7),
+                    0 0 60px rgba(212, 168, 75, 0.12);
+      }
+    }
+
+    .bundle-hero-glow {
+      animation: bundleHeroGlow 3.2s ease-in-out infinite;
+    }
+
+    .bundle-best-value-ribbon {
+      position: absolute;
+      top: -10px;
+      right: 18px;
+      background: linear-gradient(135deg, #d4a84b, #b8922f);
+      color: #0d1730;
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      padding: 5px 12px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+      z-index: 2;
+      white-space: nowrap;
     }
 
     /* ===== FOOTER ===== */
@@ -3675,6 +3708,12 @@
     
     <!-- Bottom section with CTA -->
     <div class="bottom-section">
+      <!-- Smart Sleep Bundle teaser — rendered at runtime when bundle is configured for this store -->
+      <div id="resultsBundleTeaser" style="display:none; margin:0.5rem 0 0.9rem; padding:0.75rem 1rem; background:linear-gradient(135deg,rgba(212,168,75,0.16),rgba(212,168,75,0.04)); border:1px solid rgba(212,168,75,0.4); border-radius:12px; text-align:center;">
+        <div style="font-size:0.58rem; letter-spacing:2px; color:var(--gold); font-weight:800; text-transform:uppercase; margin-bottom:0.25rem;">⭐ <span id="resultsBundleEyebrow">Best-Selling Package</span></div>
+        <div style="font-size:0.85rem; font-weight:700; color:var(--cream);" id="resultsBundleName">Smart Sleep Bundle</div>
+        <div style="font-size:0.68rem; color:var(--cream-dim); line-height:1.4; margin-top:0.2rem;" id="resultsBundleSub">Complete your sleep system on the next screen &amp; save</div>
+      </div>
       <div style="text-align:center; margin-top:0.4rem; display:flex; flex-direction:column; gap:0.5rem; align-items:center;">
         <button class="cta-btn" onclick="showAccessories()" style="background:linear-gradient(180deg, var(--gold-light) 0%, var(--gold) 100%); color:var(--navy); box-shadow:0 4px 0 #9a7a2e, 0 6px 20px rgba(212,168,75,0.25); font-size:0.85rem; padding:0.7rem 1.75rem; border:2px solid var(--gold-pale); font-weight:700; border-radius:14px; transition:all 0.15s ease;" data-i18n="results.complete_setup">Build Your Sleep System →</button>
         <div style="font-size:0.68rem; color:var(--cream-dim);" data-i18n="results.discount_applies" data-i18n-html="true">Your <span id="bannerPct" style="color:var(--gold); font-weight:700;"></span> discount applies to everything</div>
@@ -4256,6 +4295,21 @@
         document.querySelectorAll('[data-store="privacy-policy-contact"]').forEach(function(el) {
           el.textContent = textBlock.privacyPolicyContact || el.textContent;
         });
+      }
+
+      // Results-screen bundle teaser — shows only if this store has a bundle configured
+      var teaser = document.getElementById('resultsBundleTeaser');
+      if (teaser && STORE_CONFIG.bundle) {
+        var _b = STORE_CONFIG.bundle;
+        var _nameEl = document.getElementById('resultsBundleName');
+        var _subEl = document.getElementById('resultsBundleSub');
+        var _eyeEl = document.getElementById('resultsBundleEyebrow');
+        if (_nameEl) _nameEl.textContent = L(_b.name);
+        if (_eyeEl) _eyeEl.textContent = L(_b.socialProof) || (currentLang === 'es' ? 'Paquete más vendido' : 'Best-selling package');
+        if (_subEl) _subEl.textContent = currentLang === 'es'
+          ? 'Completa tu sistema de descanso en la siguiente pantalla'
+          : 'Complete your sleep system on the next screen';
+        teaser.style.display = 'block';
       }
     }
     // ----- SLEEP ACCESSORIES -----
@@ -6061,10 +6115,11 @@
           var _bPitch = L(bundleCfg.pitch);
           var _bCta = L(bundleCfg.ctaLabel);
           var _bAdded = L(bundleCfg.addedLabel);
-          var _bEyebrow = _es ? '⭐ PAQUETE MÁS VENDIDO' : '⭐ BEST-SELLING BUNDLE';
+          var _bEyebrow = _es ? '⭐ EL PAQUETE MÁS VENDIDO DE HOME ZONE' : '⭐ HOME ZONE’S BEST-SELLING BUNDLE';
+          var _bBestValue = _es ? 'MEJOR VALOR' : 'BEST VALUE';
           var _bIncludedLabel = _es ? 'INCLUYE' : 'INCLUDES';
           var _bLogoHtml = bundleCfg.brandLogo
-            ? '<img src="' + bundleCfg.brandLogo + '" alt="" style="height:38px;width:auto;max-width:150px;object-fit:contain;display:block;margin-bottom:0.75rem;opacity:0.95;">'
+            ? '<img src="' + bundleCfg.brandLogo + '" alt="" style="height:44px;width:auto;max-width:170px;object-fit:contain;display:block;margin-bottom:0.85rem;opacity:0.95;">'
             : '';
           // Build included-item chips from ACCESSORIES lookup so they stay in sync
           var chipsHtml = bundleCfg.includedAccessoryIds.map(function(accId) {
@@ -6077,25 +6132,26 @@
               + '<div style="font-size:0.7rem;color:var(--cream);line-height:1.25;min-width:0;overflow:hidden;text-overflow:ellipsis;">' + _accName + '</div>'
               + '</div>';
           }).join('');
-          var bundleHeroHtml = '<div id="bundleHeroSection" class="acc-hero-section acc-card-animated" style="grid-column:1/-1;background:linear-gradient(135deg,rgba(212,168,75,0.12),rgba(212,168,75,0.04));border:1.5px solid rgba(212,168,75,0.35);border-radius:16px;padding:1.25rem;margin-bottom:0.75rem;">'
+          var bundleHeroHtml = '<div id="bundleHeroSection" class="acc-hero-section acc-card-animated bundle-hero-glow" style="grid-column:1/-1;position:relative;background:linear-gradient(135deg,rgba(212,168,75,0.22),rgba(212,168,75,0.06) 60%,rgba(212,168,75,0.12));border-radius:18px;padding:1.6rem 1.4rem 1.4rem;margin-bottom:0.9rem;">'
+            + '<div class="bundle-best-value-ribbon">⭐ ' + _bBestValue + '</div>'
             + '<div id="bundleHeroBody">'
             +   _bLogoHtml
-            +   '<div style="font-size:0.6rem;text-transform:uppercase;letter-spacing:2px;color:var(--gold);font-weight:700;margin-bottom:0.6rem;">' + _bEyebrow + '</div>'
-            +   '<div style="font-size:1.15rem;font-weight:700;color:var(--cream);margin-bottom:0.3rem;">' + _bName + '</div>'
-            +   '<div style="font-size:0.82rem;color:var(--gold);font-weight:600;margin-bottom:0.5rem;">' + _bTagline + '</div>'
+            +   '<div style="font-size:0.64rem;text-transform:uppercase;letter-spacing:2.4px;color:var(--gold);font-weight:800;margin-bottom:0.55rem;">' + _bEyebrow + '</div>'
+            +   '<div style="font-size:1.55rem;font-weight:800;color:var(--cream);line-height:1.15;margin-bottom:0.35rem;letter-spacing:-0.01em;">' + _bName + '</div>'
+            +   '<div style="font-size:0.95rem;color:var(--gold);font-weight:700;margin-bottom:0.5rem;">' + _bTagline + '</div>'
             +   '<div style="font-size:0.72rem;color:var(--cream-dim);font-style:italic;margin-bottom:0.85rem;">' + _bSocial + '</div>'
-            +   '<div style="font-size:0.8rem;color:var(--cream-dim);line-height:1.45;margin-bottom:0.85rem;">' + _bPitch + '</div>'
-            +   '<div style="font-size:0.6rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--cream-dim);font-weight:600;margin-bottom:0.5rem;">' + _bIncludedLabel + '</div>'
-            +   '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1rem;">' + chipsHtml + '</div>'
-            +   '<button class="acc-next-btn" onclick="window._addBundle()" ontouchend="event.preventDefault();window._addBundle();" style="touch-action:manipulation;width:100%;">' + _bCta + '</button>'
+            +   '<div style="font-size:0.82rem;color:var(--cream);line-height:1.5;margin-bottom:0.95rem;opacity:0.88;">' + _bPitch + '</div>'
+            +   '<div style="font-size:0.6rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--cream-dim);font-weight:700;margin-bottom:0.5rem;">' + _bIncludedLabel + '</div>'
+            +   '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.1rem;">' + chipsHtml + '</div>'
+            +   '<button class="acc-next-btn pulse" onclick="window._addBundle()" ontouchend="event.preventDefault();window._addBundle();" style="touch-action:manipulation;width:100%;font-size:1rem;padding:0.9rem 1.25rem;letter-spacing:0.3px;font-weight:800;">' + _bCta + '</button>'
             + '</div>'
             + '<div id="bundleHeroConfirm" style="display:none;">'
             +   _bLogoHtml
-            +   '<div style="display:flex;align-items:center;gap:0.65rem;">'
-            +     '<span style="font-size:1.5rem;color:var(--gold);flex-shrink:0;">✓</span>'
+            +   '<div style="display:flex;align-items:center;gap:0.75rem;">'
+            +     '<span style="font-size:2rem;color:var(--gold);flex-shrink:0;line-height:1;">✓</span>'
             +     '<div>'
-            +       '<div style="font-size:0.95rem;font-weight:700;color:var(--cream);">' + _bName + '</div>'
-            +       '<div style="font-size:0.72rem;color:var(--cream-dim);line-height:1.4;margin-top:0.15rem;">' + _bAdded + '</div>'
+            +       '<div style="font-size:1.05rem;font-weight:800;color:var(--cream);">' + _bName + '</div>'
+            +       '<div style="font-size:0.76rem;color:var(--cream-dim);line-height:1.4;margin-top:0.2rem;">' + _bAdded + '</div>'
             +     '</div>'
             +   '</div>'
             + '</div>'
