@@ -4267,34 +4267,34 @@
     const ACCESSORIES = [
       // Adjustable Bases (shown first when quiz flags snoring/reflux/back-pain)
       { id: 'base-2150', name: {en: '2150 Adjustable Base', es: 'Base Ajustable 2150'}, category: {en: 'Foundations & Support', es: 'Bases y Soportes'},
-        image: 'images/accessories/adjustable-2150.webp',
+        image: 'images/accessories/adjustable-2150.jpg',
         description: {en: 'Independent head and foot adjustment with wireless remote and adjustable leg heights', es: 'Ajuste independiente de cabeza y pies con control inalámbrico y patas ajustables'},
         subType: 'adjustable',
         matchTags: ['snoring', 'reflux', 'back_pain'], matchScores: { snoring: 3, reflux: 3, back_pain: 2, default: 1 } },
       { id: 'base-4150', name: {en: '4150 Adjustable Base', es: 'Base Ajustable 4150'}, category: {en: 'Foundations & Support', es: 'Bases y Soportes'},
-        image: 'images/accessories/adjustable-4150.webp',
+        image: 'images/accessories/adjustable-4150.jpg',
         description: {en: 'Head/foot movement with massage, four presets, Bluetooth app control, zero clearance', es: 'Ajuste de cabeza y pies con masaje, cuatro posiciones preestablecidas y control por app Bluetooth'},
         subType: 'adjustable',
         matchTags: ['snoring', 'reflux', 'back_pain', 'premium'], matchScores: { snoring: 4, reflux: 4, back_pain: 3, premium: 2, default: 1 } },
       { id: 'base-ergo30', name: {en: 'Tempur-Ergo 3.0 Adjustable Base', es: 'Base Ajustable Tempur-Ergo 3.0'}, category: {en: 'Foundations & Support', es: 'Bases y Soportes'},
-        image: 'images/accessories/adjustable-ergo30.webp',
+        image: 'images/accessories/adjustable-ergo30.jpg',
         description: {en: 'Premium Tempurpedic base with Sleep Tracker, Snore Response, zero gravity, and app control', es: 'Base premium Tempurpedic con Sleep Tracker, respuesta a ronquidos, gravedad cero y control por app'},
         subType: 'adjustable',
         matchTags: ['snoring', 'reflux', 'back_pain', 'premium'], matchScores: { snoring: 5, reflux: 5, back_pain: 4, premium: 4, default: 1 } },
 
       // Foundations (universal across all deployments)
       { id: 'base-foundation', name: {en: 'Regular Foundation', es: 'Base Regular'}, category: {en: 'Foundations & Support', es: 'Bases y Soportes'},
-        image: 'images/accessories/base-foundation.webp',
+        image: 'images/accessories/base-foundation.jpg',
         description: {en: 'Standard-height foundation — sturdy platform support that replaces a traditional box spring', es: 'Base de altura estándar — soporte de plataforma que reemplaza un box spring tradicional'},
         subType: 'foundation',
         matchTags: ['all'], matchScores: { default: 2 } },
       { id: 'base-lowprofile', name: {en: 'Low Pro Foundation', es: 'Base de Perfil Bajo'}, category: {en: 'Foundations & Support', es: 'Bases y Soportes'},
-        image: 'images/accessories/base-lowprofile.webp',
+        image: 'images/accessories/base-lowprofile.jpg',
         description: {en: 'Reduced-height foundation — ideal for taller mattresses or platform-style frames', es: 'Base de altura reducida — ideal para colchones altos o marcos estilo plataforma'},
         subType: 'low_profile',
         matchTags: ['all'], matchScores: { default: 2 } },
       { id: 'base-bunkie', name: {en: 'Bunkie Board Foundation', es: 'Tabla Bunkie'}, category: {en: 'Foundations & Support', es: 'Bases y Soportes'},
-        image: 'images/accessories/base-bunkie.webp',
+        image: 'images/accessories/base-bunkie.jpg',
         description: {en: 'Slim board foundation for firmer support on existing bases', es: 'Tabla de soporte delgada para firmeza adicional sobre bases existentes'},
         subType: 'bunkie',
         matchTags: ['all'], matchScores: { default: 1 } },
@@ -4315,7 +4315,7 @@
 
       // Mattress Protectors (shown last)
       { id: 'protector-activedry', name: {en: 'Active Dry Protector', es: 'Protector Active Dry'}, category: {en: 'Protectors', es: 'Protectores'},
-        image: 'images/accessories/protector-activedry.webp',
+        image: 'images/accessories/protector-activedry.jpg',
         description: {en: 'HZ Sleep mattress protector with moisture-wicking technology', es: 'Protector de colchón HZ Sleep con tecnología que absorbe la humedad'},
         matchTags: ['all'], matchScores: { default: 3 } },
     ];
@@ -5715,13 +5715,13 @@
       </td></tr>
       <tr><td style="padding:0 12px 14px;">
         <table width="100%" cellpadding="0" cellspacing="0"><tr>
-          ${_bundleItemsForEmail.slice(0,3).map(a => `<td style="width:${Math.floor(100/Math.min(_bundleItemsForEmail.length,3))}%;padding:0 4px;vertical-align:top;text-align:center;">
+          ${_bundleItemsForEmail.slice(0,3).map(a => { var _w = Math.floor(536 / Math.min(_bundleItemsForEmail.length, 3)) - 8; return `<td width="${_w+8}" style="padding:0 4px;vertical-align:top;text-align:center;">
             <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.25);border-radius:8px;overflow:hidden;">
-              ${a.imageUrl ? `<img src="${a.imageUrl}" alt="${a.name}" style="width:100%;height:60px;object-fit:cover;display:block;">` : '<div style="height:60px;background:#1a2744;"></div>'}
+              ${a.imageUrl ? `<img src="${a.imageUrl}" alt="${a.name}" width="${_w}" height="60" style="display:block;border:0;width:${_w}px;height:60px;object-fit:cover;">` : `<div style="height:60px;background:#1a2744;"></div>`}
               <div style="padding:6px 8px;font-size:11px;color:#ffffff;font-weight:600;">${a.name}</div>
               <div style="padding:0 8px 8px;font-size:10px;color:#a0b0c8;">${a.category}</div>
             </div>
-          </td>`).join('')}
+          </td>`; }).join('')}
         </tr></table>
       </td></tr>
     </table>
@@ -5730,13 +5730,13 @@
   <tr><td style="padding:8px 32px 16px;">
     <div style="font-size:10px;letter-spacing:2px;color:#c9a84c;text-transform:uppercase;margin-bottom:14px;">${_eAccLabel}</div>
     <table width="100%" cellpadding="0" cellspacing="0"><tr>
-      ${_nonBundleAccList.slice(0,3).map(a => `<td style="width:${Math.floor(100/Math.min(_nonBundleAccList.length,3))}%;padding:0 4px;vertical-align:top;text-align:center;">
+      ${_nonBundleAccList.slice(0,3).map(a => { var _w = Math.floor(536 / Math.min(_nonBundleAccList.length, 3)) - 8; return `<td width="${_w+8}" style="padding:0 4px;vertical-align:top;text-align:center;">
         <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;overflow:hidden;">
-          ${a.imageUrl ? `<img src="${a.imageUrl}" alt="${a.name}" style="width:100%;height:60px;object-fit:cover;display:block;">` : '<div style="height:60px;background:#1a2744;"></div>'}
+          ${a.imageUrl ? `<img src="${a.imageUrl}" alt="${a.name}" width="${_w}" height="60" style="display:block;border:0;width:${_w}px;height:60px;object-fit:cover;">` : `<div style="height:60px;background:#1a2744;"></div>`}
           <div style="padding:6px 8px;font-size:11px;color:#ffffff;font-weight:600;">${a.name}</div>
           <div style="padding:0 8px 8px;font-size:10px;color:#a0b0c8;">${a.category}</div>
         </div>
-      </td>`).join('')}
+      </td>`; }).join('')}
     </tr></table>
   </td></tr>` : ''}
   <tr><td style="padding:20px 32px 28px;text-align:center;border-top:1px solid rgba(255,255,255,0.08);">
