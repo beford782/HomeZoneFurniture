@@ -96,6 +96,13 @@ foreach ($row in $rows) {
         $bundleEligible = $true
     }
 
+    # Parse family (optional column; groups variants of the same mattress so
+    # the scoring engine can show only the best-matching variant per family)
+    $family = ""
+    if ($row.PSObject.Properties.Match('family') -and $row.family -and $row.family.Trim()) {
+        $family = $row.family.Trim().ToLower()
+    }
+
     $subBrand = ""
     if ($row.subBrand -and $row.subBrand.Trim()) { $subBrand = $row.subBrand.Trim() }
     $firmnessLbl = ""
@@ -150,6 +157,7 @@ foreach ($row in $rows) {
         firmnessLabel   = $firmnessLbl
         locallyMade     = $locallyMade
         bundleEligible  = $bundleEligible
+        family          = $family
         features        = $features
         tags            = $tags
         highlight       = $highlight
