@@ -102,106 +102,106 @@
                      "reasons_es":  {
 
                                     }
+                 },
+                 {
+                     "id":  "g3",
+                     "name":  "Ember Firm",
+                     "brand":  "HZ Sleep",
+                     "subBrand":  "",
+                     "firmness":  7,
+                     "firmnessLabel":  "Firm",
+                     "locallyMade":  true,
+                     "bundleEligible":  true,
+                     "features":  [
+                                      "firm",
+                                      "cooling",
+                                      "pressureRelief",
+                                      "hybrid",
+                                      "motionIsolation",
+                                      "copper",
+                                      "antiViral",
+                                      "antiBacterial",
+                                      "antiMicrobial",
+                                      "antiInflammatory",
+                                      "memory",
+                                      "hypoallergenic"
+                                  ],
+                     "tags":  [
+                                  "Hybrid",
+                                  "Copper",
+                                  "Cooling"
+                              ],
+                     "highlight":  "Infused with natural copper to draw heat away, soothe pressure points, and help reduce inflammation, the Ember delivers cooler, deeper, more restorative sleep",
+                     "tags_es":  [
+
+                                 ],
+                     "highlight_es":  "",
+                     "imageUrl":  "images/mattresses/ember firm.webp",
+                     "reasons":  {
+                                     "firm":  "Extra firm for stomach sleepers and larger builds",
+                                     "default":  "Infused with natural copper to draw heat away, soothe pressure points, and help reduce inflammation, the Ember delivers cooler, deeper, more restorative sleep",
+                                     "cooling":  "NatuVerex copper infusion draws heat away",
+                                     "support":  "Five-zone, 948 coil-count pocketed coils",
+                                     "durability":  "Premium foams and premium spring",
+                                     "motionIsolation":  "Pocketed coils minimize partner disturbance",
+                                     "pressureRelief":  "Copper Memory Foam and Hyper-Gel Foam"
+                                 },
+                     "reasons_es":  {
+
+                                    }
+                 },
+                 {
+                     "id":  "g4",
+                     "name":  "Ember Plush",
+                     "brand":  "HZ Sleep",
+                     "subBrand":  "",
+                     "firmness":  2,
+                     "firmnessLabel":  "Plush",
+                     "locallyMade":  true,
+                     "bundleEligible":  true,
+                     "features":  [
+                                      "plush",
+                                      "cooling",
+                                      "pressureRelief",
+                                      "hybrid",
+                                      "motionIsolation",
+                                      "copper",
+                                      "antiViral",
+                                      "antiBacterial",
+                                      "antiMicrobial",
+                                      "antiInflammatory",
+                                      "soft",
+                                      "memory",
+                                      "hypoallergenic"
+                                  ],
+                     "tags":  [
+                                  "Hybrid",
+                                  "Copper",
+                                  "Cooling"
+                              ],
+                     "highlight":  "Infused with natural copper to draw heat away, soothe pressure points, and help reduce inflammation, the Ember delivers cooler, deeper, more restorative sleep",
+                     "tags_es":  [
+
+                                 ],
+                     "highlight_es":  "",
+                     "imageUrl":  "images/mattresses/ember plush.webp",
+                     "reasons":  {
+                                     "default":  "Infused with natural copper to draw heat away, soothe pressure points, and help reduce inflammation, the Ember delivers cooler, deeper, more restorative sleep",
+                                     "cooling":  "NatuVerex copper infusion draws heat away",
+                                     "support":  "Five-zone, 948 coil-count pocketed coils",
+                                     "durability":  "Premium foams and premium spring",
+                                     "plush":  "Welcoming, soft plush feel for side sleepers",
+                                     "motionIsolation":  "Pocketed coils minimize partner disturbance",
+                                     "pressureRelief":  "Copper Memory Foam and Hyper-Gel Foam"
+                                 },
+                     "reasons_es":  {
+
+                                    }
                  }
              ],
     "silver":  [
                    {
                        "id":  "s1",
-                       "name":  "Ember Firm",
-                       "brand":  "HZ Sleep",
-                       "subBrand":  "",
-                       "firmness":  7,
-                       "firmnessLabel":  "Firm",
-                       "locallyMade":  true,
-                       "bundleEligible":  true,
-                       "features":  [
-                                        "firm",
-                                        "cooling",
-                                        "pressureRelief",
-                                        "hybrid",
-                                        "motionIsolation",
-                                        "copper",
-                                        "antiViral",
-                                        "antiBacterial",
-                                        "antiMicrobial",
-                                        "antiInflammatory",
-                                        "memory",
-                                        "hypoallergenic"
-                                    ],
-                       "tags":  [
-                                    "Hybrid",
-                                    "Copper",
-                                    "Cooling"
-                                ],
-                       "highlight":  "Infused with natural copper to draw heat away, soothe pressure points, and help reduce inflammation, the Ember delivers cooler, deeper, more restorative sleep",
-                       "tags_es":  [
-
-                                   ],
-                       "highlight_es":  "",
-                       "imageUrl":  "images/mattresses/ember firm.webp",
-                       "reasons":  {
-                                       "firm":  "Extra firm for stomach sleepers and larger builds",
-                                       "default":  "Infused with natural copper to draw heat away, soothe pressure points, and help reduce inflammation, the Ember delivers cooler, deeper, more restorative sleep",
-                                       "cooling":  "NatuVerex copper infusion draws heat away",
-                                       "support":  "Five-zone, 948 coil-count pocketed coils",
-                                       "durability":  "Premium foams and premium spring",
-                                       "motionIsolation":  "Pocketed coils minimize partner disturbance",
-                                       "pressureRelief":  "Copper Memory Foam and Hyper-Gel Foam"
-                                   },
-                       "reasons_es":  {
-
-                                      }
-                   },
-                   {
-                       "id":  "s2",
-                       "name":  "Ember Plush",
-                       "brand":  "HZ Sleep",
-                       "subBrand":  "",
-                       "firmness":  2,
-                       "firmnessLabel":  "Plush",
-                       "locallyMade":  true,
-                       "bundleEligible":  true,
-                       "features":  [
-                                        "plush",
-                                        "cooling",
-                                        "pressureRelief",
-                                        "hybrid",
-                                        "motionIsolation",
-                                        "copper",
-                                        "antiViral",
-                                        "antiBacterial",
-                                        "antiMicrobial",
-                                        "antiInflammatory",
-                                        "soft",
-                                        "memory",
-                                        "hypoallergenic"
-                                    ],
-                       "tags":  [
-                                    "Hybrid",
-                                    "Copper",
-                                    "Cooling"
-                                ],
-                       "highlight":  "Infused with natural copper to draw heat away, soothe pressure points, and help reduce inflammation, the Ember delivers cooler, deeper, more restorative sleep",
-                       "tags_es":  [
-
-                                   ],
-                       "highlight_es":  "",
-                       "imageUrl":  "images/mattresses/ember plush.webp",
-                       "reasons":  {
-                                       "default":  "Infused with natural copper to draw heat away, soothe pressure points, and help reduce inflammation, the Ember delivers cooler, deeper, more restorative sleep",
-                                       "cooling":  "NatuVerex copper infusion draws heat away",
-                                       "support":  "Five-zone, 948 coil-count pocketed coils",
-                                       "durability":  "Premium foams and premium spring",
-                                       "plush":  "Welcoming, soft plush feel for side sleepers",
-                                       "motionIsolation":  "Pocketed coils minimize partner disturbance",
-                                       "pressureRelief":  "Copper Memory Foam and Hyper-Gel Foam"
-                                   },
-                       "reasons_es":  {
-
-                                      }
-                   },
-                   {
-                       "id":  "s3",
                        "name":  "Jenna Plush",
                        "brand":  "HZ Sleep",
                        "subBrand":  "",
@@ -248,7 +248,7 @@
                                       }
                    },
                    {
-                       "id":  "s4",
+                       "id":  "s2",
                        "name":  "Jenna Firm",
                        "brand":  "HZ Sleep",
                        "subBrand":  "",
@@ -295,7 +295,7 @@
                                       }
                    },
                    {
-                       "id":  "s5",
+                       "id":  "s3",
                        "name":  "Malia",
                        "brand":  "HZ Sleep",
                        "subBrand":  "",
@@ -340,7 +340,7 @@
                                       }
                    },
                    {
-                       "id":  "s6",
+                       "id":  "s4",
                        "name":  "Malia Firm",
                        "brand":  "HZ Sleep",
                        "subBrand":  "",
@@ -385,7 +385,7 @@
                                       }
                    },
                    {
-                       "id":  "s7",
+                       "id":  "s5",
                        "name":  "PRObreeze 2.0 Medium",
                        "brand":  "Tempurpedic",
                        "subBrand":  "",
@@ -427,7 +427,7 @@
                                       }
                    },
                    {
-                       "id":  "s8",
+                       "id":  "s6",
                        "name":  "PROAdapt 2.0 Medium Hybrid",
                        "brand":  "Tempurpedic",
                        "subBrand":  "",
@@ -472,7 +472,7 @@
                                       }
                    },
                    {
-                       "id":  "s9",
+                       "id":  "s7",
                        "name":  "PROAdapt 2.0 Firm",
                        "brand":  "Tempurpedic",
                        "subBrand":  "",
@@ -516,7 +516,7 @@
                                       }
                    },
                    {
-                       "id":  "s10",
+                       "id":  "s8",
                        "name":  "PROAdapt 2.0 Medium",
                        "brand":  "Tempurpedic",
                        "subBrand":  "",
@@ -558,7 +558,7 @@
                                       }
                    },
                    {
-                       "id":  "s11",
+                       "id":  "s9",
                        "name":  "Lux Estate Medium Tight Top",
                        "brand":  "Stearns \u0026 Foster",
                        "subBrand":  "",
@@ -603,7 +603,7 @@
                                       }
                    },
                    {
-                       "id":  "s12",
+                       "id":  "s10",
                        "name":  "Lux Estate Medium Euro Pillow Top",
                        "brand":  "Stearns \u0026 Foster",
                        "subBrand":  "",
