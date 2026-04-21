@@ -5176,7 +5176,11 @@
       ['gold', 'silver', 'bronze'].forEach((tier, tierIndex) => {
         const sorted = [...MATTRESSES[tier]].sort((a, b) => scores[b.id] - scores[a.id]);
         const maxScore = Math.max(...sorted.map(m => scores[m.id]), 1);
-        const qualified = sorted.filter(m => Math.round((scores[m.id] / maxScore) * 100) >= 60);
+        // Gold tier is always populated (Home Zone wants 2-3 Gold picks always
+        // visible). Silver and Bronze still use the 60% qualification filter.
+        const qualified = tier === 'gold'
+          ? sorted
+          : sorted.filter(m => Math.round((scores[m.id] / maxScore) * 100) >= 60);
         const top3 = qualified.slice(0, 3);
 
         if (top3.length === 0) {
