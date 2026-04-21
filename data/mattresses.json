@@ -2,222 +2,6 @@
     "gold":  [
                  {
                      "id":  "g1",
-                     "name":  "PRObreeze 2.0 Medium",
-                     "brand":  "Tempurpedic",
-                     "subBrand":  "",
-                     "firmness":  5,
-                     "firmnessLabel":  "Medium",
-                     "locallyMade":  false,
-                     "bundleEligible":  true,
-                     "features":  [
-                                      "medium",
-                                      "cooling",
-                                      "pressureRelief",
-                                      "memory",
-                                      "motionIsolation",
-                                      "comfort",
-                                      "quality"
-                                  ],
-                     "tags":  [
-                                  "All-Foam",
-                                  "Cooling",
-                                  "Premium",
-                                  "TEMPUR-APR"
-                              ],
-                     "highlight":  "Premium cooling mattress — 3-level system sleeps up to 10° cooler",
-                     "tags_es":  [
-
-                                 ],
-                     "highlight_es":  "",
-                     "imageUrl":  "images/mattresses/probreeze 2.0 medium.jpg",
-                     "reasons":  {
-                                     "medium":  "Balanced medium feel ideal for back and combination sleepers",
-                                     "default":  "Premium all-foam cooling Tempurpedic in a balanced medium feel",
-                                     "cooling":  "PureCool+ phase-change cover and 3-level cooling system — sleeps up to 10° cooler",
-                                     "durability":  "Tempurpedic\u0027s proprietary TEMPUR-APR material and 10-year warranty",
-                                     "motionIsolation":  "All-foam TEMPUR construction absorbs partner motion completely",
-                                     "pressureRelief":  "TEMPUR-APR material deeply contours to relieve hip and shoulder pressure"
-                                 },
-                     "reasons_es":  {
-
-                                    }
-                 },
-                 {
-                     "id":  "g2",
-                     "name":  "PROAdapt 2.0 Medium Hybrid",
-                     "brand":  "Tempurpedic",
-                     "subBrand":  "",
-                     "firmness":  5,
-                     "firmnessLabel":  "Medium",
-                     "locallyMade":  false,
-                     "bundleEligible":  true,
-                     "features":  [
-                                      "medium",
-                                      "cooling",
-                                      "hybrid",
-                                      "pressureRelief",
-                                      "motionIsolation",
-                                      "support",
-                                      "memory",
-                                      "durability",
-                                      "quality"
-                                  ],
-                     "tags":  [
-                                  "Hybrid",
-                                  "Cooling",
-                                  "Premium",
-                                  "TEMPUR"
-                              ],
-                     "highlight":  "Hybrid Tempurpedic — TEMPUR material over 1160 pocketed coils",
-                     "tags_es":  [
-
-                                 ],
-                     "highlight_es":  "",
-                     "imageUrl":  "images/mattresses/proadapt 2.0 medium hybrid.webp",
-                     "reasons":  {
-                                     "durability":  "Pocketed coil durability plus Tempurpedic 10-year warranty",
-                                     "default":  "Hybrid luxury from Tempurpedic — TEMPUR material over a premium coil system",
-                                     "cooling":  "SmartClimate dual cover wicks heat away from the body",
-                                     "support":  "1160-coil pocketed spring unit delivers targeted support where you need it",
-                                     "medium":  "Hybrid construction pairs coil responsiveness with pressure-relieving feel",
-                                     "motionIsolation":  "Pocketed coils individually isolate motion while TEMPUR absorbs shifts",
-                                     "pressureRelief":  "Two layers of pressure-relieving TEMPUR material contour to your body"
-                                 },
-                     "reasons_es":  {
-
-                                    }
-                 },
-                 {
-                     "id":  "g3",
-                     "name":  "PROAdapt 2.0 Firm",
-                     "brand":  "Tempurpedic",
-                     "subBrand":  "",
-                     "firmness":  8,
-                     "firmnessLabel":  "Firm",
-                     "locallyMade":  false,
-                     "bundleEligible":  true,
-                     "features":  [
-                                      "firm",
-                                      "support",
-                                      "pressureRelief",
-                                      "cooling",
-                                      "memory",
-                                      "motionIsolation",
-                                      "durability",
-                                      "quality"
-                                  ],
-                     "tags":  [
-                                  "All-Foam",
-                                  "Cooling",
-                                  "Premium",
-                                  "TEMPUR-APR"
-                              ],
-                     "highlight":  "Firm Tempurpedic with TEMPUR-APR support and cooling technology",
-                     "tags_es":  [
-
-                                 ],
-                     "highlight_es":  "",
-                     "imageUrl":  "images/mattresses/proadapt 2.0 firm.jpg",
-                     "reasons":  {
-                                     "firm":  "Firm feel gives stomach sleepers and heavier builds the support they need",
-                                     "default":  "Firm all-foam Tempurpedic with premium cooling and pressure relief",
-                                     "cooling":  "Cool-to-touch cover and TEMPUR cooling technology keep the surface temperate",
-                                     "support":  "Firm TEMPUR-APR material delivers head-to-toe support — ideal for back pain",
-                                     "durability":  "Tempurpedic 10-year warranty and TEMPUR-APR engineered for long-term performance",
-                                     "motionIsolation":  "All-foam TEMPUR construction absorbs partner motion completely",
-                                     "pressureRelief":  "Two layers of pressure-relieving TEMPUR material for back and stomach sleepers"
-                                 },
-                     "reasons_es":  {
-
-                                    }
-                 },
-                 {
-                     "id":  "g4",
-                     "name":  "Adapt 2.0 Medium Hybrid",
-                     "brand":  "Tempurpedic",
-                     "subBrand":  "",
-                     "firmness":  5,
-                     "firmnessLabel":  "Medium",
-                     "locallyMade":  false,
-                     "bundleEligible":  true,
-                     "features":  [
-                                      "medium",
-                                      "hybrid",
-                                      "cooling",
-                                      "pressureRelief",
-                                      "motionIsolation",
-                                      "support",
-                                      "memory",
-                                      "comfort",
-                                      "quality"
-                                  ],
-                     "tags":  [
-                                  "Hybrid",
-                                  "Cooling",
-                                  "TEMPUR"
-                              ],
-                     "highlight":  "Hybrid Tempurpedic with two layers of TEMPUR material and cooling cover",
-                     "tags_es":  [
-
-                                 ],
-                     "highlight_es":  "",
-                     "imageUrl":  "images/mattresses/adapt 2.0 medium hybrid.jpg",
-                     "reasons":  {
-                                     "durability":  "Tempurpedic 10-year warranty",
-                                     "default":  "Entry Tempurpedic hybrid — quality construction in an accessible price point",
-                                     "cooling":  "Cool-to-touch cover provides surface-level temperature relief",
-                                     "support":  "Pocketed coil spring unit provides structured support",
-                                     "medium":  "Balanced medium feel that adapts to your sleep position",
-                                     "motionIsolation":  "Hybrid construction with TEMPUR motion-absorbing foam",
-                                     "pressureRelief":  "Two layers of premium TEMPUR material cradle hips and shoulders"
-                                 },
-                     "reasons_es":  {
-
-                                    }
-                 },
-                 {
-                     "id":  "g5",
-                     "name":  "Adapt 2.0 Medium",
-                     "brand":  "Tempurpedic",
-                     "subBrand":  "",
-                     "firmness":  5,
-                     "firmnessLabel":  "Medium",
-                     "locallyMade":  false,
-                     "bundleEligible":  true,
-                     "features":  [
-                                      "medium",
-                                      "cooling",
-                                      "pressureRelief",
-                                      "memory",
-                                      "motionIsolation",
-                                      "comfort",
-                                      "quality"
-                                  ],
-                     "tags":  [
-                                  "All-Foam",
-                                  "TEMPUR",
-                                  "Cooling"
-                              ],
-                     "highlight":  "All-foam Tempurpedic — two layers of TEMPUR material for full body adaptability",
-                     "tags_es":  [
-
-                                 ],
-                     "highlight_es":  "",
-                     "imageUrl":  "images/mattresses/adapt 2.0 medium.jpg",
-                     "reasons":  {
-                                     "medium":  "Medium feel adapts to your sleep position throughout the night",
-                                     "default":  "Entry Tempurpedic all-foam — premium TEMPUR material in an accessible price point",
-                                     "cooling":  "Cool-to-touch cover takes heat away from the body",
-                                     "durability":  "Tempurpedic 10-year warranty",
-                                     "motionIsolation":  "All-foam TEMPUR construction absorbs partner motion",
-                                     "pressureRelief":  "Premium TEMPUR material delivers pressure relief where you need it"
-                                 },
-                     "reasons_es":  {
-
-                                    }
-                 },
-                 {
-                     "id":  "g6",
                      "name":  "Stella ET Plush",
                      "brand":  "HZ Sleep",
                      "subBrand":  "",
@@ -269,7 +53,7 @@
                                     }
                  },
                  {
-                     "id":  "g7",
+                     "id":  "g2",
                      "name":  "Stella Firm",
                      "brand":  "HZ Sleep",
                      "subBrand":  "",
@@ -314,48 +98,6 @@
                                      "medium":  "Perfect medium feel for most sleepers and all sleep positions, with balanced Talalay latex responsiveness",
                                      "motionIsolation":  "Individually-pocketed zoned coils plus Nano micro-coils minimize partner disturbance",
                                      "pressureRelief":  "Talalay latex and Serene Specialty Foam deliver 30% more pressure relief with responsive contouring"
-                                 },
-                     "reasons_es":  {
-
-                                    }
-                 },
-                 {
-                     "id":  "g8",
-                     "name":  "PROAdapt 2.0 Medium",
-                     "brand":  "Tempurpedic",
-                     "subBrand":  "",
-                     "firmness":  5,
-                     "firmnessLabel":  "Medium",
-                     "locallyMade":  false,
-                     "bundleEligible":  true,
-                     "features":  [
-                                      "medium",
-                                      "cooling",
-                                      "pressureRelief",
-                                      "memory",
-                                      "motionIsolation",
-                                      "comfort",
-                                      "quality"
-                                  ],
-                     "tags":  [
-                                  "All-Foam",
-                                  "Cooling",
-                                  "Premium",
-                                  "TEMPUR-APR"
-                              ],
-                     "highlight":  "All-foam Tempurpedic — TEMPUR-APR material with SmartClimate cover",
-                     "tags_es":  [
-
-                                 ],
-                     "highlight_es":  "",
-                     "imageUrl":  "images/mattresses/proadapt 2.0 medium.webp",
-                     "reasons":  {
-                                     "medium":  "Balanced medium feel ideal for back and combination sleepers",
-                                     "default":  "Premium all-foam Tempurpedic with TEMPUR-APR adaptive support",
-                                     "cooling":  "SmartClimate dual cover wicks heat away from the body",
-                                     "durability":  "Tempurpedic\u0027s proprietary TEMPUR-APR material and 10-year warranty",
-                                     "motionIsolation":  "All-foam TEMPUR construction absorbs partner motion completely",
-                                     "pressureRelief":  "TEMPUR-APR material deeply contours to relieve pressure"
                                  },
                      "reasons_es":  {
 
@@ -644,44 +386,41 @@
                    },
                    {
                        "id":  "s7",
-                       "name":  "Estate Firm Tight Top",
-                       "brand":  "Stearns \u0026 Foster",
+                       "name":  "PRObreeze 2.0 Medium",
+                       "brand":  "Tempurpedic",
                        "subBrand":  "",
-                       "firmness":  9,
-                       "firmnessLabel":  "Firm",
+                       "firmness":  5,
+                       "firmnessLabel":  "Medium",
                        "locallyMade":  false,
                        "bundleEligible":  true,
                        "features":  [
-                                        "firm",
+                                        "medium",
                                         "cooling",
-                                        "hybrid",
-                                        "support",
-                                        "motionIsolation",
-                                        "memory",
                                         "pressureRelief",
-                                        "durability",
+                                        "memory",
+                                        "motionIsolation",
+                                        "comfort",
                                         "quality"
                                     ],
                        "tags":  [
-                                    "Hybrid",
-                                    "IntelliCoil",
-                                    "TEMPUR-Indulge",
-                                    "AirVent"
+                                    "All-Foam",
+                                    "Cooling",
+                                    "Premium",
+                                    "TEMPUR-APR"
                                 ],
-                       "highlight":  "Firm S\u0026F hybrid — IntelliCoil innersprings with TEMPUR-Indulge memory foam",
+                       "highlight":  "Premium cooling mattress — 3-level system sleeps up to 10° cooler",
                        "tags_es":  [
 
                                    ],
                        "highlight_es":  "",
-                       "imageUrl":  "images/mattresses/estate firm tight top.webp",
+                       "imageUrl":  "images/mattresses/probreeze 2.0 medium.jpg",
                        "reasons":  {
-                                       "firm":  "Firm feel for stomach sleepers and heavier builds",
-                                       "default":  "Luxury S\u0026F hybrid with IntelliCoil and TEMPUR-Indulge foam in a firm feel",
-                                       "cooling":  "AirVent System — 4 ventilated air channels plus stretch-knit TENCEL moisture-wicking cover",
-                                       "support":  "IntelliCoil innersprings with Precision Edge high-density border for full-surface support",
-                                       "durability":  "10-year full replacement warranty with 121-night sleep guarantee",
-                                       "motionIsolation":  "TEMPUR-Indulge foam layer absorbs partner motion",
-                                       "pressureRelief":  "TEMPUR-Indulge Memory Foam developed by Tempur-Pedic for targeted pressure relief"
+                                       "medium":  "Balanced medium feel ideal for back and combination sleepers",
+                                       "default":  "Premium all-foam cooling Tempurpedic in a balanced medium feel",
+                                       "cooling":  "PureCool+ phase-change cover and 3-level cooling system — sleeps up to 10° cooler",
+                                       "durability":  "Tempurpedic\u0027s proprietary TEMPUR-APR material and 10-year warranty",
+                                       "motionIsolation":  "All-foam TEMPUR construction absorbs partner motion completely",
+                                       "pressureRelief":  "TEMPUR-APR material deeply contours to relieve hip and shoulder pressure"
                                    },
                        "reasons_es":  {
 
@@ -689,44 +428,44 @@
                    },
                    {
                        "id":  "s8",
-                       "name":  "Estate Soft Euro Pillow Top",
-                       "brand":  "Stearns \u0026 Foster",
+                       "name":  "PROAdapt 2.0 Medium Hybrid",
+                       "brand":  "Tempurpedic",
                        "subBrand":  "",
-                       "firmness":  2,
-                       "firmnessLabel":  "Plush",
+                       "firmness":  5,
+                       "firmnessLabel":  "Medium",
                        "locallyMade":  false,
                        "bundleEligible":  true,
                        "features":  [
-                                        "plush",
+                                        "medium",
                                         "cooling",
                                         "hybrid",
                                         "pressureRelief",
                                         "motionIsolation",
-                                        "soft",
+                                        "support",
                                         "memory",
                                         "durability",
                                         "quality"
                                     ],
                        "tags":  [
                                     "Hybrid",
-                                    "IntelliCoil",
-                                    "Euro Pillow Top",
-                                    "TEMPUR-Indulge"
+                                    "Cooling",
+                                    "Premium",
+                                    "TEMPUR"
                                 ],
-                       "highlight":  "Plush S\u0026F hybrid — Euro pillow top with TEMPUR-Indulge memory foam",
+                       "highlight":  "Hybrid Tempurpedic — TEMPUR material over 1160 pocketed coils",
                        "tags_es":  [
 
                                    ],
                        "highlight_es":  "",
-                       "imageUrl":  "images/mattresses/estate soft euro pillow top.jpg",
+                       "imageUrl":  "images/mattresses/proadapt 2.0 medium hybrid.webp",
                        "reasons":  {
-                                       "default":  "Luxury S\u0026F hybrid with Euro pillow top and TEMPUR-Indulge foam in a soft plush feel",
-                                       "cooling":  "AirVent System — 4 ventilated air channels plus stretch-knit TENCEL moisture-wicking cover",
-                                       "support":  "IntelliCoil innersprings with Precision Edge high-density border",
-                                       "durability":  "10-year full replacement warranty with 121-night sleep guarantee",
-                                       "plush":  "Euro pillow top with TEMPUR-Indulge foam — ideal for side sleepers",
-                                       "motionIsolation":  "TEMPUR-Indulge foam layer absorbs partner motion",
-                                       "pressureRelief":  "TEMPUR-Indulge Memory Foam and Euro pillow top deliver deep pressure relief"
+                                       "durability":  "Pocketed coil durability plus Tempurpedic 10-year warranty",
+                                       "default":  "Hybrid luxury from Tempurpedic — TEMPUR material over a premium coil system",
+                                       "cooling":  "SmartClimate dual cover wicks heat away from the body",
+                                       "support":  "1160-coil pocketed spring unit delivers targeted support where you need it",
+                                       "medium":  "Hybrid construction pairs coil responsiveness with pressure-relieving feel",
+                                       "motionIsolation":  "Pocketed coils individually isolate motion while TEMPUR absorbs shifts",
+                                       "pressureRelief":  "Two layers of pressure-relieving TEMPUR material contour to your body"
                                    },
                        "reasons_es":  {
 
@@ -734,6 +473,92 @@
                    },
                    {
                        "id":  "s9",
+                       "name":  "PROAdapt 2.0 Firm",
+                       "brand":  "Tempurpedic",
+                       "subBrand":  "",
+                       "firmness":  8,
+                       "firmnessLabel":  "Firm",
+                       "locallyMade":  false,
+                       "bundleEligible":  true,
+                       "features":  [
+                                        "firm",
+                                        "support",
+                                        "pressureRelief",
+                                        "cooling",
+                                        "memory",
+                                        "motionIsolation",
+                                        "durability",
+                                        "quality"
+                                    ],
+                       "tags":  [
+                                    "All-Foam",
+                                    "Cooling",
+                                    "Premium",
+                                    "TEMPUR-APR"
+                                ],
+                       "highlight":  "Firm Tempurpedic with TEMPUR-APR support and cooling technology",
+                       "tags_es":  [
+
+                                   ],
+                       "highlight_es":  "",
+                       "imageUrl":  "images/mattresses/proadapt 2.0 firm.jpg",
+                       "reasons":  {
+                                       "firm":  "Firm feel gives stomach sleepers and heavier builds the support they need",
+                                       "default":  "Firm all-foam Tempurpedic with premium cooling and pressure relief",
+                                       "cooling":  "Cool-to-touch cover and TEMPUR cooling technology keep the surface temperate",
+                                       "support":  "Firm TEMPUR-APR material delivers head-to-toe support — ideal for back pain",
+                                       "durability":  "Tempurpedic 10-year warranty and TEMPUR-APR engineered for long-term performance",
+                                       "motionIsolation":  "All-foam TEMPUR construction absorbs partner motion completely",
+                                       "pressureRelief":  "Two layers of pressure-relieving TEMPUR material for back and stomach sleepers"
+                                   },
+                       "reasons_es":  {
+
+                                      }
+                   },
+                   {
+                       "id":  "s10",
+                       "name":  "PROAdapt 2.0 Medium",
+                       "brand":  "Tempurpedic",
+                       "subBrand":  "",
+                       "firmness":  5,
+                       "firmnessLabel":  "Medium",
+                       "locallyMade":  false,
+                       "bundleEligible":  true,
+                       "features":  [
+                                        "medium",
+                                        "cooling",
+                                        "pressureRelief",
+                                        "memory",
+                                        "motionIsolation",
+                                        "comfort",
+                                        "quality"
+                                    ],
+                       "tags":  [
+                                    "All-Foam",
+                                    "Cooling",
+                                    "Premium",
+                                    "TEMPUR-APR"
+                                ],
+                       "highlight":  "All-foam Tempurpedic — TEMPUR-APR material with SmartClimate cover",
+                       "tags_es":  [
+
+                                   ],
+                       "highlight_es":  "",
+                       "imageUrl":  "images/mattresses/proadapt 2.0 medium.webp",
+                       "reasons":  {
+                                       "medium":  "Balanced medium feel ideal for back and combination sleepers",
+                                       "default":  "Premium all-foam Tempurpedic with TEMPUR-APR adaptive support",
+                                       "cooling":  "SmartClimate dual cover wicks heat away from the body",
+                                       "durability":  "Tempurpedic\u0027s proprietary TEMPUR-APR material and 10-year warranty",
+                                       "motionIsolation":  "All-foam TEMPUR construction absorbs partner motion completely",
+                                       "pressureRelief":  "TEMPUR-APR material deeply contours to relieve pressure"
+                                   },
+                       "reasons_es":  {
+
+                                      }
+                   },
+                   {
+                       "id":  "s11",
                        "name":  "Lux Estate Medium Tight Top",
                        "brand":  "Stearns \u0026 Foster",
                        "subBrand":  "",
@@ -778,7 +603,7 @@
                                       }
                    },
                    {
-                       "id":  "s10",
+                       "id":  "s12",
                        "name":  "Lux Estate Medium Euro Pillow Top",
                        "brand":  "Stearns \u0026 Foster",
                        "subBrand":  "",
@@ -1035,6 +860,181 @@
                                        "durability":  "20-year warranty with 121-night sleep guarantee",
                                        "motionIsolation":  "Foam-encased Tri-Zoned coils minimize partner disturbance",
                                        "pressureRelief":  "Copper-infused memory foam contours and relieves pressure"
+                                   },
+                       "reasons_es":  {
+
+                                      }
+                   },
+                   {
+                       "id":  "b6",
+                       "name":  "Adapt 2.0 Medium Hybrid",
+                       "brand":  "Tempurpedic",
+                       "subBrand":  "",
+                       "firmness":  5,
+                       "firmnessLabel":  "Medium",
+                       "locallyMade":  false,
+                       "bundleEligible":  true,
+                       "features":  [
+                                        "medium",
+                                        "hybrid",
+                                        "cooling",
+                                        "pressureRelief",
+                                        "motionIsolation",
+                                        "support",
+                                        "memory",
+                                        "comfort",
+                                        "quality"
+                                    ],
+                       "tags":  [
+                                    "Hybrid",
+                                    "Cooling",
+                                    "TEMPUR"
+                                ],
+                       "highlight":  "Hybrid Tempurpedic with two layers of TEMPUR material and cooling cover",
+                       "tags_es":  [
+
+                                   ],
+                       "highlight_es":  "",
+                       "imageUrl":  "images/mattresses/adapt 2.0 medium hybrid.jpg",
+                       "reasons":  {
+                                       "durability":  "Tempurpedic 10-year warranty",
+                                       "default":  "Entry Tempurpedic hybrid — quality construction in an accessible price point",
+                                       "cooling":  "Cool-to-touch cover provides surface-level temperature relief",
+                                       "support":  "Pocketed coil spring unit provides structured support",
+                                       "medium":  "Balanced medium feel that adapts to your sleep position",
+                                       "motionIsolation":  "Hybrid construction with TEMPUR motion-absorbing foam",
+                                       "pressureRelief":  "Two layers of premium TEMPUR material cradle hips and shoulders"
+                                   },
+                       "reasons_es":  {
+
+                                      }
+                   },
+                   {
+                       "id":  "b7",
+                       "name":  "Adapt 2.0 Medium",
+                       "brand":  "Tempurpedic",
+                       "subBrand":  "",
+                       "firmness":  5,
+                       "firmnessLabel":  "Medium",
+                       "locallyMade":  false,
+                       "bundleEligible":  true,
+                       "features":  [
+                                        "medium",
+                                        "cooling",
+                                        "pressureRelief",
+                                        "memory",
+                                        "motionIsolation",
+                                        "comfort",
+                                        "quality"
+                                    ],
+                       "tags":  [
+                                    "All-Foam",
+                                    "TEMPUR",
+                                    "Cooling"
+                                ],
+                       "highlight":  "All-foam Tempurpedic — two layers of TEMPUR material for full body adaptability",
+                       "tags_es":  [
+
+                                   ],
+                       "highlight_es":  "",
+                       "imageUrl":  "images/mattresses/adapt 2.0 medium.jpg",
+                       "reasons":  {
+                                       "medium":  "Medium feel adapts to your sleep position throughout the night",
+                                       "default":  "Entry Tempurpedic all-foam — premium TEMPUR material in an accessible price point",
+                                       "cooling":  "Cool-to-touch cover takes heat away from the body",
+                                       "durability":  "Tempurpedic 10-year warranty",
+                                       "motionIsolation":  "All-foam TEMPUR construction absorbs partner motion",
+                                       "pressureRelief":  "Premium TEMPUR material delivers pressure relief where you need it"
+                                   },
+                       "reasons_es":  {
+
+                                      }
+                   },
+                   {
+                       "id":  "b8",
+                       "name":  "Estate Firm Tight Top",
+                       "brand":  "Stearns \u0026 Foster",
+                       "subBrand":  "",
+                       "firmness":  9,
+                       "firmnessLabel":  "Firm",
+                       "locallyMade":  false,
+                       "bundleEligible":  true,
+                       "features":  [
+                                        "firm",
+                                        "cooling",
+                                        "hybrid",
+                                        "support",
+                                        "motionIsolation",
+                                        "memory",
+                                        "pressureRelief",
+                                        "durability",
+                                        "quality"
+                                    ],
+                       "tags":  [
+                                    "Hybrid",
+                                    "IntelliCoil",
+                                    "TEMPUR-Indulge",
+                                    "AirVent"
+                                ],
+                       "highlight":  "Firm S\u0026F hybrid — IntelliCoil innersprings with TEMPUR-Indulge memory foam",
+                       "tags_es":  [
+
+                                   ],
+                       "highlight_es":  "",
+                       "imageUrl":  "images/mattresses/estate firm tight top.webp",
+                       "reasons":  {
+                                       "firm":  "Firm feel for stomach sleepers and heavier builds",
+                                       "default":  "Luxury S\u0026F hybrid with IntelliCoil and TEMPUR-Indulge foam in a firm feel",
+                                       "cooling":  "AirVent System — 4 ventilated air channels plus stretch-knit TENCEL moisture-wicking cover",
+                                       "support":  "IntelliCoil innersprings with Precision Edge high-density border for full-surface support",
+                                       "durability":  "10-year full replacement warranty with 121-night sleep guarantee",
+                                       "motionIsolation":  "TEMPUR-Indulge foam layer absorbs partner motion",
+                                       "pressureRelief":  "TEMPUR-Indulge Memory Foam developed by Tempur-Pedic for targeted pressure relief"
+                                   },
+                       "reasons_es":  {
+
+                                      }
+                   },
+                   {
+                       "id":  "b9",
+                       "name":  "Estate Soft Euro Pillow Top",
+                       "brand":  "Stearns \u0026 Foster",
+                       "subBrand":  "",
+                       "firmness":  2,
+                       "firmnessLabel":  "Plush",
+                       "locallyMade":  false,
+                       "bundleEligible":  true,
+                       "features":  [
+                                        "plush",
+                                        "cooling",
+                                        "hybrid",
+                                        "pressureRelief",
+                                        "motionIsolation",
+                                        "soft",
+                                        "memory",
+                                        "durability",
+                                        "quality"
+                                    ],
+                       "tags":  [
+                                    "Hybrid",
+                                    "IntelliCoil",
+                                    "Euro Pillow Top",
+                                    "TEMPUR-Indulge"
+                                ],
+                       "highlight":  "Plush S\u0026F hybrid — Euro pillow top with TEMPUR-Indulge memory foam",
+                       "tags_es":  [
+
+                                   ],
+                       "highlight_es":  "",
+                       "imageUrl":  "images/mattresses/estate soft euro pillow top.jpg",
+                       "reasons":  {
+                                       "default":  "Luxury S\u0026F hybrid with Euro pillow top and TEMPUR-Indulge foam in a soft plush feel",
+                                       "cooling":  "AirVent System — 4 ventilated air channels plus stretch-knit TENCEL moisture-wicking cover",
+                                       "support":  "IntelliCoil innersprings with Precision Edge high-density border",
+                                       "durability":  "10-year full replacement warranty with 121-night sleep guarantee",
+                                       "plush":  "Euro pillow top with TEMPUR-Indulge foam — ideal for side sleepers",
+                                       "motionIsolation":  "TEMPUR-Indulge foam layer absorbs partner motion",
+                                       "pressureRelief":  "TEMPUR-Indulge Memory Foam and Euro pillow top deliver deep pressure relief"
                                    },
                        "reasons_es":  {
 
