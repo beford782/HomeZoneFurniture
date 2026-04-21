@@ -5681,23 +5681,34 @@
         imageUrl: toAbsoluteImageUrl(a.imageUrl)
       }));
 
-      // Bundle-aware split for the email: when the Smart Sleep Bundle is
-      // active and all its included items are still in the cart, render
-      // those items under a Smart Sleep Bundle block and show any extra
-      // (non-bundle) accessories separately.
+      // Bundle-aware split for the email. Source of truth: whether all
+      // bundle items are currently in the cart (not the window._bundleActive
+      // flag, which can fall out of sync if the customer toggles items).
+      // If any retailer has a bundle configured, always include bundle info
+      // in the email — either as "added" (all items in cart) or as "promo"
+      // (suggesting the bundle for future visits).
       const _bundleCfgEmail = (typeof STORE_CONFIG !== 'undefined' && STORE_CONFIG.bundle) || null;
       const _bundleIdsEmail = (_bundleCfgEmail && Array.isArray(_bundleCfgEmail.includedAccessoryIds)) ? _bundleCfgEmail.includedAccessoryIds : [];
-      const _bundleItemsPresentEmail = _bundleIdsEmail.length > 0 && _bundleIdsEmail.every(function(aid) { return !!(window._accCart && window._accCart[aid]); });
-      const _bundleActiveEmail = !!(window._bundleActive && _bundleCfgEmail && _bundleItemsPresentEmail);
-      const _bundleItemsForEmail = _bundleActiveEmail ? _bundleIdsEmail.map(function(aid) {
-        var cartItem = window._accCart[aid];
-        if (!cartItem) return null;
-        return { name: cartItem.name, category: cartItem.category, imageUrl: toAbsoluteImageUrl(cartItem.imageUrl || '') };
-      }).filter(Boolean) : [];
+      const _bundleActiveEmail = !!(_bundleCfgEmail && _bundleIdsEmail.length > 0 && _bundleIdsEmail.every(function(aid) { return !!(window._accCart && window._accCart[aid]); }));
+      // Items to render inside the bundle block. Prefer live cart data when
+      // the bundle is active; otherwise fall back to the ACCESSORIES catalog
+      // so the promo version still shows all three included items by image.
+      const _bundleItemsForEmail = _bundleIdsEmail.map(function(aid) {
+        var cartItem = (window._accCart && window._accCart[aid]) || null;
+        if (cartItem) {
+          return { name: cartItem.name, category: cartItem.category, imageUrl: toAbsoluteImageUrl(cartItem.imageUrl || '') };
+        }
+        var accItem = (typeof ACCESSORIES !== 'undefined') ? ACCESSORIES.find(function(a) { return a.id === aid; }) : null;
+        if (!accItem) return null;
+        var _aName = typeof accItem.name === 'object' ? (accItem.name[currentLang] || accItem.name.en) : accItem.name;
+        var _aCat = typeof accItem.category === 'object' ? (accItem.category[currentLang] || accItem.category.en) : accItem.category;
+        return { name: _aName, category: _aCat, imageUrl: toAbsoluteImageUrl(accItem.image || '') };
+      }).filter(Boolean);
+      const _bundleShowSection = !!(_bundleCfgEmail && _bundleItemsForEmail.length > 0);
       const _bundleNamesSet = new Set(_bundleItemsForEmail.map(function(b) { return b.name; }));
       const _nonBundleAccList = _bundleActiveEmail ? accList.filter(function(a) { return !_bundleNamesSet.has(a.name); }) : accList;
-      const _bundleNameEmail = _bundleActiveEmail && _bundleCfgEmail.name ? (typeof _bundleCfgEmail.name === 'object' ? (_bundleCfgEmail.name[currentLang] || _bundleCfgEmail.name.en) : _bundleCfgEmail.name) : '';
-      const _bundleLogoAbs = _bundleActiveEmail && _bundleCfgEmail.brandLogo ? toAbsoluteImageUrl(_bundleCfgEmail.brandLogo) : '';
+      const _bundleNameEmail = _bundleCfgEmail && _bundleCfgEmail.name ? (typeof _bundleCfgEmail.name === 'object' ? (_bundleCfgEmail.name[currentLang] || _bundleCfgEmail.name.en) : _bundleCfgEmail.name) : '';
+      const _bundleLogoAbs = _bundleCfgEmail && _bundleCfgEmail.brandLogo ? toAbsoluteImageUrl(_bundleCfgEmail.brandLogo) : '';
 
       // Build HTML email client-side with product images
       const firstName = name.split(' ')[0] || name;
@@ -5758,20 +5769,25 @@
       </tr>
     </table>`).join('')}
   </td></tr>
-  ${_bundleActiveEmail ? `
+  ${_bundleShowSection ? `
   <tr><td style="padding:8px 32px 16px;">
-    <table width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,rgba(201,168,76,0.10),rgba(201,168,76,0.03));border:1.5px solid rgba(201,168,76,0.45);border-radius:12px;overflow:hidden;">
-      <tr><td style="padding:14px 16px 8px;">
-        ${_bundleLogoAbs ? `<img src="${_bundleLogoAbs}" alt="" height="28" style="display:block;height:28px;width:auto;max-width:130px;margin-bottom:8px;">` : ''}
-        <div style="font-size:10px;letter-spacing:2px;color:#c9a84c;text-transform:uppercase;font-weight:700;margin-bottom:4px;">&#11088; ${_es ? 'PAQUETE SMART SLEEP' : 'SMART SLEEP BUNDLE'}</div>
-        <div style="font-size:15px;font-weight:700;color:#ffffff;margin-bottom:4px;">${_bundleNameEmail}</div>
-        <div style="font-size:11px;color:#a0b0c8;">${_es ? 'Incluido con el paquete' : 'Included with bundle'}</div>
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,rgba(201,168,76,0.14),rgba(201,168,76,0.04));border:1.5px solid rgba(201,168,76,0.55);border-radius:12px;overflow:hidden;">
+      <tr><td style="padding:14px 16px 10px;">
+        <table width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td style="vertical-align:top;">
+            ${_bundleLogoAbs ? `<img src="${_bundleLogoAbs}" alt="" width="110" height="24" style="display:block;border:0;margin-bottom:8px;max-width:110px;height:auto;">` : ''}
+            <div style="font-size:10px;letter-spacing:2px;color:#c9a84c;text-transform:uppercase;font-weight:700;margin-bottom:4px;">&#11088; ${_bundleActiveEmail ? (_es ? 'PAQUETE SMART SLEEP' : 'SMART SLEEP BUNDLE') : (_es ? 'EL PAQUETE MÁS VENDIDO' : "HOME ZONE'S BEST-SELLING BUNDLE")}</div>
+            <div style="font-size:17px;font-weight:800;color:#ffffff;margin-bottom:4px;">${_bundleNameEmail}</div>
+            <div style="font-size:12px;color:#c9a84c;font-weight:600;margin-bottom:4px;">${_bundleActiveEmail ? (_es ? '&#10003; Incluido con el paquete' : '&#10003; Included with bundle') : (_es ? 'El mejor valor &mdash; ahorra con el paquete' : 'Best value &mdash; save when you bundle')}</div>
+            ${!_bundleActiveEmail ? `<div style="font-size:11px;color:#a0b0c8;line-height:1.4;margin-top:6px;">${_es ? 'Pregunta sobre el Paquete Smart Sleep en tu tienda Home Zone &mdash; combina tu colchón con base ajustable, almohada y protector para el mejor valor.' : 'Ask about the Smart Sleep Bundle at Home Zone &mdash; pair your mattress with an adjustable base, cooling pillow, and mattress protection for the best value.'}</div>` : ''}
+          </td>
+        </tr></table>
       </td></tr>
       <tr><td style="padding:0 12px 14px;">
         <table width="100%" cellpadding="0" cellspacing="0"><tr>
-          ${_bundleItemsForEmail.slice(0,3).map(a => { var _w = Math.floor(536 / Math.min(_bundleItemsForEmail.length, 3)) - 8; return `<td width="${_w+8}" style="padding:0 4px;vertical-align:top;text-align:center;">
+          ${_bundleItemsForEmail.slice(0,3).map((a, _bi, _barr) => { var _w = Math.floor(536 / Math.min(_barr.length, 3)) - 8; return `<td width="${_w+8}" style="padding:0 4px;vertical-align:top;text-align:center;">
             <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.25);border-radius:8px;overflow:hidden;">
-              ${a.imageUrl ? `<img src="${a.imageUrl}" width="${_w}" height="90" alt="${a.name}" style="display:block;border:0;object-fit:cover;">` : `<div style="height:90px;background:#1a2744;"></div>`}
+              ${a.imageUrl ? `<img src="${a.imageUrl}" width="${_w}" height="90" alt="${a.name}" style="display:block;border:0;max-width:100%;height:auto;outline:none;text-decoration:none;">` : `<div style="height:90px;background:#1a2744;"></div>`}
               <div style="padding:6px 8px;font-size:11px;color:#ffffff;font-weight:600;">${a.name}</div>
               <div style="padding:0 8px 8px;font-size:10px;color:#a0b0c8;">${a.category}</div>
             </div>
@@ -5786,7 +5802,7 @@
     <table width="100%" cellpadding="0" cellspacing="0"><tr>
       ${_nonBundleAccList.slice(0,3).map(a => { var _w = Math.floor(536 / Math.min(_nonBundleAccList.length, 3)) - 8; return `<td width="${_w+8}" style="padding:0 4px;vertical-align:top;text-align:center;">
         <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;overflow:hidden;">
-          ${a.imageUrl ? `<img src="${a.imageUrl}" width="${_w}" height="90" alt="${a.name}" style="display:block;border:0;object-fit:cover;">` : `<div style="height:90px;background:#1a2744;"></div>`}
+          ${a.imageUrl ? `<img src="${a.imageUrl}" width="${_w}" height="90" alt="${a.name}" style="display:block;border:0;max-width:100%;height:auto;outline:none;text-decoration:none;">` : `<div style="height:90px;background:#1a2744;"></div>`}
           <div style="padding:6px 8px;font-size:11px;color:#ffffff;font-weight:600;">${a.name}</div>
           <div style="padding:0 8px 8px;font-size:10px;color:#a0b0c8;">${a.category}</div>
         </div>
@@ -6526,7 +6542,9 @@
       var bundleIds = (bundleCfg && Array.isArray(bundleCfg.includedAccessoryIds)) ? bundleCfg.includedAccessoryIds : [];
       var bundleItemsPresent = bundleIds.length > 0 && bundleIds.every(function(aid) { return !!(window._accCart && window._accCart[aid]); });
       var eligiblePicks = (window._savedPicks || []).filter(function(p) { return !!p.bundleEligible; });
-      var bundleGrouped = !!(window._bundleActive && bundleCfg && bundleItemsPresent && eligiblePicks.length > 0);
+      // Use cart-based detection (not the _bundleActive flag) so the
+      // handoff still groups bundle correctly even if the flag went stale.
+      var bundleGrouped = !!(bundleCfg && bundleItemsPresent && eligiblePicks.length > 0);
 
       var renderedBundleMattressIds = {};
 
@@ -6654,20 +6672,33 @@
         analytics.recommendedAccessories = Object.entries(window._accCart).map(([k,v]) => ({ name: v.name, category: v.category, imageUrl: v.imageUrl || '' }));
         window._updatePicksBadge && window._updatePicksBadge();
       }
-      // If a bundle item got removed, un-flag the bundle as active
-      if (window._bundleActive) {
-        var _b = (typeof STORE_CONFIG !== 'undefined' && STORE_CONFIG.bundle) || null;
-        if (_b && Array.isArray(_b.includedAccessoryIds)) {
-          var allPresent = _b.includedAccessoryIds.every(function(aid) { return !!window._accCart[aid]; });
-          if (!allPresent) {
-            window._bundleActive = false;
-            try { analytics.log('bundle_item_removed', { remaining: Object.keys(window._accCart) }); } catch(e) {}
-            var _heroBody = document.getElementById('bundleHeroBody');
-            var _heroConfirm = document.getElementById('bundleHeroConfirm');
-            if (_heroBody && _heroConfirm) {
-              _heroBody.style.display = '';
-              _heroConfirm.style.display = 'none';
-            }
+      // Keep window._bundleActive in sync with cart state whenever an
+      // accessory is toggled:
+      //  - if any bundle item is missing from the cart → deactivate bundle
+      //  - if all bundle items are back in the cart → reactivate bundle
+      // This handles the case where a customer removes then re-adds a
+      // bundle item (otherwise the flag would stay stale at false and the
+      // email/handoff would never show the bundle section again).
+      var _bCfg = (typeof STORE_CONFIG !== 'undefined' && STORE_CONFIG.bundle) || null;
+      if (_bCfg && Array.isArray(_bCfg.includedAccessoryIds)) {
+        var _allBundlePresent = _bCfg.includedAccessoryIds.every(function(aid) { return !!window._accCart[aid]; });
+        if (window._bundleActive && !_allBundlePresent) {
+          window._bundleActive = false;
+          try { analytics.log('bundle_item_removed', { remaining: Object.keys(window._accCart) }); } catch(e) {}
+          var _heroBody = document.getElementById('bundleHeroBody');
+          var _heroConfirm = document.getElementById('bundleHeroConfirm');
+          if (_heroBody && _heroConfirm) {
+            _heroBody.style.display = '';
+            _heroConfirm.style.display = 'none';
+          }
+        } else if (!window._bundleActive && _allBundlePresent) {
+          window._bundleActive = true;
+          try { analytics.log('bundle_reactivated', { items: _bCfg.includedAccessoryIds }); } catch(e) {}
+          var _heroBodyR = document.getElementById('bundleHeroBody');
+          var _heroConfirmR = document.getElementById('bundleHeroConfirm');
+          if (_heroBodyR && _heroConfirmR) {
+            _heroBodyR.style.display = 'none';
+            _heroConfirmR.style.display = 'block';
           }
         }
       }
