@@ -9,7 +9,7 @@
                      "firmnessLabel":  "Plush",
                      "locallyMade":  true,
                      "bundleEligible":  true,
-                     "family":  "",
+                     "family":  "stella",
                      "features":  [
                                       "plush",
                                       "cooling",
@@ -62,7 +62,7 @@
                      "firmnessLabel":  "Firm",
                      "locallyMade":  true,
                      "bundleEligible":  true,
-                     "family":  "",
+                     "family":  "stella",
                      "features":  [
                                       "medium",
                                       "cooling",
