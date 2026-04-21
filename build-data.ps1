@@ -90,6 +90,12 @@ foreach ($row in $rows) {
         $locallyMade = $true
     }
 
+    # Parse bundleEligible to boolean (optional column; absent/blank means false)
+    $bundleEligible = $false
+    if ($row.PSObject.Properties.Match('bundleEligible') -and $row.bundleEligible -and $row.bundleEligible.Trim().ToLower() -eq 'yes') {
+        $bundleEligible = $true
+    }
+
     $subBrand = ""
     if ($row.subBrand -and $row.subBrand.Trim()) { $subBrand = $row.subBrand.Trim() }
     $firmnessLbl = ""
@@ -136,21 +142,22 @@ foreach ($row in $rows) {
     }
 
     $mattress = [ordered]@{
-        id            = $row.id.Trim()
-        name          = $row.name.Trim()
-        brand         = $row.brand.Trim()
-        subBrand      = $subBrand
-        firmness      = $firmness
-        firmnessLabel = $firmnessLbl
-        locallyMade   = $locallyMade
-        features      = $features
-        tags          = $tags
-        highlight     = $highlight
-        tags_es       = $tags_es
-        highlight_es  = $highlight_es
-        imageUrl      = $imageUrl
-        reasons       = $reasons
-        reasons_es    = $reasons_es
+        id              = $row.id.Trim()
+        name            = $row.name.Trim()
+        brand           = $row.brand.Trim()
+        subBrand        = $subBrand
+        firmness        = $firmness
+        firmnessLabel   = $firmnessLbl
+        locallyMade     = $locallyMade
+        bundleEligible  = $bundleEligible
+        features        = $features
+        tags            = $tags
+        highlight       = $highlight
+        tags_es         = $tags_es
+        highlight_es    = $highlight_es
+        imageUrl        = $imageUrl
+        reasons         = $reasons
+        reasons_es      = $reasons_es
     }
 
     $result[$tier] += $mattress

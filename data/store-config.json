@@ -11,6 +11,26 @@
     "storePrimaryGlow": "rgba(163, 47, 44, 0.15)"
   },
   "discountPrefix": "HOME",
+  "bundle": {
+    "id": "smart-sleep-bundle",
+    "brandLogo": "logo/hz-sleep-white.png",
+    "name": { "en": "Smart Sleep Bundle", "es": "Paquete Smart Sleep" },
+    "tagline": {
+      "en": "Best value — save when you bundle",
+      "es": "El mejor valor — ahorra con el paquete"
+    },
+    "socialProof": {
+      "en": "Home Zone's best-selling sleep package",
+      "es": "El paquete de sueño más vendido de Home Zone"
+    },
+    "pitch": {
+      "en": "Complete your sleep system with everything your new mattress needs — adjustable base, cooling pillow, and mattress protection, all in one bundle.",
+      "es": "Completa tu sistema de descanso con todo lo que tu colchón necesita — base ajustable, almohada y protector, todo en un solo paquete."
+    },
+    "includedAccessoryIds": ["base-4150", "pillow-cooling-mediumloft", "protector-activedry"],
+    "ctaLabel": { "en": "Add Smart Sleep Bundle", "es": "Agregar paquete Smart Sleep" },
+    "addedLabel": { "en": "Bundle added — tap any item below to customize", "es": "Paquete agregado — toca cualquier artículo para personalizar" }
+  },
   "text": {
     "pageTitle": "DreamFinder — Home Zone Furniture Sleep Quiz",
     "metaDescription": "Take the DreamFinder sleep quiz at Home Zone Furniture and get personalized mattress recommendations.",

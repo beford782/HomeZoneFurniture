@@ -8,6 +8,7 @@
                      "firmness":  5,
                      "firmnessLabel":  "Medium",
                      "locallyMade":  false,
+                     "bundleEligible":  true,
                      "features":  [
                                       "medium",
                                       "cooling",
@@ -49,6 +50,7 @@
                      "firmness":  5,
                      "firmnessLabel":  "Medium",
                      "locallyMade":  false,
+                     "bundleEligible":  true,
                      "features":  [
                                       "medium",
                                       "cooling",
@@ -93,6 +95,7 @@
                      "firmness":  8,
                      "firmnessLabel":  "Firm",
                      "locallyMade":  false,
+                     "bundleEligible":  true,
                      "features":  [
                                       "firm",
                                       "support",
@@ -136,6 +139,7 @@
                      "firmness":  5,
                      "firmnessLabel":  "Medium",
                      "locallyMade":  false,
+                     "bundleEligible":  true,
                      "features":  [
                                       "medium",
                                       "hybrid",
@@ -179,6 +183,7 @@
                      "firmness":  5,
                      "firmnessLabel":  "Medium",
                      "locallyMade":  false,
+                     "bundleEligible":  true,
                      "features":  [
                                       "medium",
                                       "cooling",
@@ -219,6 +224,7 @@
                      "firmness":  2,
                      "firmnessLabel":  "Plush",
                      "locallyMade":  true,
+                     "bundleEligible":  true,
                      "features":  [
                                       "plush",
                                       "cooling",
@@ -270,6 +276,7 @@
                      "firmness":  8,
                      "firmnessLabel":  "Firm",
                      "locallyMade":  true,
+                     "bundleEligible":  true,
                      "features":  [
                                       "medium",
                                       "cooling",
@@ -320,6 +327,7 @@
                      "firmness":  5,
                      "firmnessLabel":  "Medium",
                      "locallyMade":  false,
+                     "bundleEligible":  true,
                      "features":  [
                                       "medium",
                                       "cooling",
@@ -363,6 +371,7 @@
                        "firmness":  7,
                        "firmnessLabel":  "Firm",
                        "locallyMade":  true,
+                       "bundleEligible":  true,
                        "features":  [
                                         "firm",
                                         "cooling",
@@ -409,6 +418,7 @@
                        "firmness":  2,
                        "firmnessLabel":  "Plush",
                        "locallyMade":  true,
+                       "bundleEligible":  true,
                        "features":  [
                                         "plush",
                                         "cooling",
@@ -456,6 +466,7 @@
                        "firmness":  2,
                        "firmnessLabel":  "Plush",
                        "locallyMade":  true,
+                       "bundleEligible":  true,
                        "features":  [
                                         "plush",
                                         "cooling",
@@ -502,6 +513,7 @@
                        "firmness":  8,
                        "firmnessLabel":  "Firm",
                        "locallyMade":  true,
+                       "bundleEligible":  true,
                        "features":  [
                                         "firm",
                                         "cooling",
@@ -548,6 +560,7 @@
                        "firmness":  5,
                        "firmnessLabel":  "Medium",
                        "locallyMade":  true,
+                       "bundleEligible":  true,
                        "features":  [
                                         "medium",
                                         "cooling",
@@ -592,6 +605,7 @@
                        "firmness":  9,
                        "firmnessLabel":  "Firm",
                        "locallyMade":  true,
+                       "bundleEligible":  true,
                        "features":  [
                                         "firm",
                                         "cooling",
@@ -636,6 +650,7 @@
                        "firmness":  9,
                        "firmnessLabel":  "Firm",
                        "locallyMade":  false,
+                       "bundleEligible":  true,
                        "features":  [
                                         "firm",
                                         "cooling",
@@ -680,6 +695,7 @@
                        "firmness":  2,
                        "firmnessLabel":  "Plush",
                        "locallyMade":  false,
+                       "bundleEligible":  true,
                        "features":  [
                                         "plush",
                                         "cooling",
@@ -724,6 +740,7 @@
                        "firmness":  5,
                        "firmnessLabel":  "Medium",
                        "locallyMade":  false,
+                       "bundleEligible":  true,
                        "features":  [
                                         "medium",
                                         "cooling",
@@ -768,6 +785,7 @@
                        "firmness":  5,
                        "firmnessLabel":  "Medium",
                        "locallyMade":  false,
+                       "bundleEligible":  true,
                        "features":  [
                                         "medium",
                                         "cooling",
@@ -814,6 +832,7 @@
                        "firmness":  3,
                        "firmnessLabel":  "Plush",
                        "locallyMade":  true,
+                       "bundleEligible":  true,
                        "features":  [
                                         "plush",
                                         "cooling",
@@ -857,6 +876,7 @@
                        "firmness":  9,
                        "firmnessLabel":  "Firm",
                        "locallyMade":  true,
+                       "bundleEligible":  true,
                        "features":  [
                                         "firm",
                                         "cooling",
@@ -898,6 +918,7 @@
                        "firmness":  2,
                        "firmnessLabel":  "Plush",
                        "locallyMade":  true,
+                       "bundleEligible":  true,
                        "features":  [
                                         "plush",
                                         "cooling",
@@ -940,6 +961,7 @@
                        "firmness":  8,
                        "firmnessLabel":  "Firm",
                        "locallyMade":  true,
+                       "bundleEligible":  true,
                        "features":  [
                                         "firm",
                                         "cooling",
@@ -981,6 +1003,7 @@
                        "firmness":  7,
                        "firmnessLabel":  "Firm",
                        "locallyMade":  true,
+                       "bundleEligible":  true,
                        "features":  [
                                         "firm",
                                         "cooling",
