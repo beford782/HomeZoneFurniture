@@ -5717,7 +5717,7 @@
         <table width="100%" cellpadding="0" cellspacing="0"><tr>
           ${_bundleItemsForEmail.slice(0,3).map(a => { var _w = Math.floor(536 / Math.min(_bundleItemsForEmail.length, 3)) - 8; return `<td width="${_w+8}" style="padding:0 4px;vertical-align:top;text-align:center;">
             <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.25);border-radius:8px;overflow:hidden;">
-              ${a.imageUrl ? `<img src="${a.imageUrl}" alt="${a.name}" width="${_w}" height="60" style="display:block;border:0;width:${_w}px;height:60px;object-fit:cover;">` : `<div style="height:60px;background:#1a2744;"></div>`}
+              ${a.imageUrl ? `<img src="${a.imageUrl}" width="${_w}" height="90" alt="${a.name}" style="display:block;border:0;object-fit:cover;">` : `<div style="height:90px;background:#1a2744;"></div>`}
               <div style="padding:6px 8px;font-size:11px;color:#ffffff;font-weight:600;">${a.name}</div>
               <div style="padding:0 8px 8px;font-size:10px;color:#a0b0c8;">${a.category}</div>
             </div>
@@ -5732,7 +5732,7 @@
     <table width="100%" cellpadding="0" cellspacing="0"><tr>
       ${_nonBundleAccList.slice(0,3).map(a => { var _w = Math.floor(536 / Math.min(_nonBundleAccList.length, 3)) - 8; return `<td width="${_w+8}" style="padding:0 4px;vertical-align:top;text-align:center;">
         <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;overflow:hidden;">
-          ${a.imageUrl ? `<img src="${a.imageUrl}" alt="${a.name}" width="${_w}" height="60" style="display:block;border:0;width:${_w}px;height:60px;object-fit:cover;">` : `<div style="height:60px;background:#1a2744;"></div>`}
+          ${a.imageUrl ? `<img src="${a.imageUrl}" width="${_w}" height="90" alt="${a.name}" style="display:block;border:0;object-fit:cover;">` : `<div style="height:90px;background:#1a2744;"></div>`}
           <div style="padding:6px 8px;font-size:11px;color:#ffffff;font-weight:600;">${a.name}</div>
           <div style="padding:0 8px 8px;font-size:10px;color:#a0b0c8;">${a.category}</div>
         </div>
