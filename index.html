@@ -5666,7 +5666,9 @@
       function toAbsoluteImageUrl(u) {
         if (!u) return '';
         if (/^https?:\/\//i.test(u) || u.startsWith('//')) return u;
-        return PUBLIC_ASSET_ROOT + u.replace(/^\.?\/*/, '');
+        // ?v= busts Apple Mail Privacy Protection's proxy cache when we
+        // swap image bytes under a stable filename. Bump when needed.
+        return PUBLIC_ASSET_ROOT + u.replace(/^\.?\/*/, '') + '?v=2';
       }
       // Prefer the customer's saved picks (what they marked "I'm Interested" on)
       // over the algorithm's top recommendations. Fall back to the top
